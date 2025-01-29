@@ -1,6 +1,6 @@
 asgiref==3.8.1
 Django==5.1.5
-django-admin-extra-buttons==1.6.0
+django-admin-extra-buttons==1.5.8
 django-jazzmin==3.0.1
 et_xmlfile==2.0.0
 openpyxl==3.1.5
