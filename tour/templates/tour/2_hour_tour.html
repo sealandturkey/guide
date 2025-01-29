@@ -1,0 +1,558 @@
+{% load static %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ general_setting.site_title }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ general_setting.favicon.url }}">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/tour_page.css' %}">
+    </head>
+    <body class="hero-anime">
+      <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#" target="_blank">
+                    <img src="{{ general_setting.logo.url }}" id="logo" alt="Site Logo">
+                </a>
+            
+                <!-- Dil Seçimi (Dropdown Menüsü) -->
+                <div class="dropdown ms-auto">
+                    <button
+                        class="btn btn-warning dropdown-toggle d-flex align-items-center"
+                        type="button"
+                        id="languageDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <!-- Seçili Dili Göster -->
+                        <img
+                            src="https://flagcdn.com/w40/{{selected_language.short_name}}.png"
+                            alt="Selected Language"
+                            width="24"
+                            height="16"
+                            class="me-2"
+                        />
+                        {{ selected_language.name }}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <!-- Varsayılan Dil (English) -->
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center {% if selected_language == 'en' %}active{% endif %}" 
+                              href="http://{{ request.get_host }}{{ request.path|slice:':-3' }}en/">
+                              <img
+                                  src="https://flagcdn.com/w40/us.png"
+                                  alt="English"
+                                  width="24"
+                                  height="16"
+                                  class="me-2"
+                              />
+                              English
+                            </a>
+                        </li>
+                        <!-- Diğer Diller -->
+                        {% for lang in language_setting %}
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center {% if selected_language == lang.short_language_name|lower %}active{% endif %}" 
+                              href="http://{{ request.get_host }}{{ request.path|slice:':-3' }}{{ lang.short_language_name|lower }}/">
+                                <img
+                                    src="https://flagcdn.com/w40/{{ lang.short_language_name|lower }}.png"
+                                    alt="{{ lang.language_name }}"
+                                    width="24"
+                                    height="16"
+                                    class="me-2"
+                                />
+                                {{ lang.language_name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="landing-page">
+        <div class="container">
+          <div class="content">
+            <div class="text-cont">
+              <h1 class="header">
+                <span class="first-clr" id="title">{{ section_setting.title_start }}</span>
+              </h1>
+              <p class="description" id="description">
+                {{ section_setting.description_start }}
+              </p>
+            </div>
+            <div class="img-cont">
+              <img class="img" id="banner" src="{{ section_setting.banner_img_start.url }}">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <div class="container my-5">
+        <h3 class="header_for_route"><span class="first-clr">{{ section_setting.title_map }}</span></h3>
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG8T2E-en9Xr9cV_cpe8_-2MxEL7P916M&v=weekly&callback=initMap&libraries=marker&loading=async" defer></script>
+        <div class="timeline-container">
+          <ul class="timeline" id="timeline">
+              <!-- Dynamic Content -->
+          </ul>
+        </div>
+      </div>
+
+   
+      <script>
+        const tourData = {{ tour_data|safe }};
+      </script>
+
+      <section class="landing-page landing-page-footer-end">
+        <div class="container">
+          <div class="content">
+            <div class="text-cont">
+              <h1 class="header">
+                <span class="first-clr" id="title">{{ section_setting.title_end }}</span>
+              </h1>
+              <p class="description" id="description">
+                {{ section_setting.description_end }}
+              </p>
+            </div>
+            <div class="img-cont">
+              <img class="img" id="banner" src="{{ section_setting.banner_img_end.url }}">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div 
+        class="modal fade" 
+        id="authModal" 
+        tabindex="-1" 
+        aria-labelledby="authModalLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-5 d-flex align-items-center">
+                    <!-- Modal Image -->
+                    <div class="col-md-6">
+                        <img src="{% static 'image/loginregistermodal.jpg' %}" alt="Register/Login Image" class="img-fluid rounded">
+                    </div>
+                    <!-- Modal Text -->
+                    <div class="col-md-6 ps-md-4">
+                        <h3 class="mb-3">Membership Required</h3>
+                        <p>To access the tour content, you need to sign up or log in. It takes less than 1 minute to create an account!</p>
+                        <div class="d-flex gap-2">
+                            <a href="{% url 'login' %}" class="btn btn-primary">Sign in</a>
+                            <a href="{% url 'register' %}" class="btn btn-success">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- Register Modal -->
+    <div 
+    class="modal fade" 
+    id="registerModal" 
+    tabindex="-1" 
+    aria-labelledby="registerModalLabel" 
+    aria-hidden="true"
+    style="background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+              <div class="modal-header">
+                <h3 class="mb-0" id="registerModalLabel">Create an Account</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+                {% if error_message.error_register %}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      {{ error_message.error_register }}
+                  </div>
+                {% endif %}
+                <form method="POST" action="{% url 'register' %}?next={{ request.path }}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div 
+    class="modal fade" 
+    id="verifyModal" 
+    tabindex="-1" 
+    aria-labelledby="verifyModalLabel" 
+    aria-hidden="true"
+    style="background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+              <div class="modal-header">
+                <h3 class="mb-0" id="verifyModalLabel">Verify Your Mail</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+                {% if error_message.error_verify %}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      {{ error_message.error_verify }}
+                  </div>
+                {% endif %}
+                <form method="POST" action="{% url 'register' %}?next={{ request.path }}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Verification Code</label>
+                        <input type="input" class="form-control" id="verification_code" name="verification_code" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Verify Account</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div 
+    class="modal fade" 
+    id="loginModal" 
+    tabindex="-1" 
+    aria-labelledby="loginModalLabel" 
+    aria-hidden="true"
+    style="background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+              <div class="modal-header">
+                <h3 class="mb-0" id="loginModalLabel">Login</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+                {% if error_message.error_login %}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      {{ error_message.error_login }}
+                  </div>
+                {% endif %}
+                <form method="POST" action="{% url 'login' %}?next={{ request.path }}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Login</button>
+                </form>
+                <div class="text-end mt-2">
+                  <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#rememberModal">
+                    Forgot My Password
+                  </a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div 
+    class="modal fade" 
+    id="rememberModal" 
+    tabindex="-1" 
+    aria-labelledby="rememberModalLabel" 
+    aria-hidden="true"
+    style="background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-5">
+              <div class="modal-header">
+                <h3 class="mb-0" id="rememberModalLabel">Password Reset</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+                {% if error_message.error_reset %}
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      {{ error_message.error_reset }}
+                  </div>
+                {% endif %}
+                <form method="POST" action="{% url 'reset-password' %}?next={{ request.path }}">
+                  <div class="alert alert-primary" role="alert" id="infoBtn">
+                    Please enter your registered email address.
+                  </div>
+                  {% csrf_token %}
+                  <div class="mb-3" id="email-code-container">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email_reset" name="email_reset" required>
+                  </div>
+                  <div class="mb-3 d-none" id="verification-code-container">
+                      <label for="verification_code_reset" class="form-label">Verification Code</label>
+                      <input type="text" class="form-control" id="verification_code_reset" name="verification_code">
+                  </div>
+                  <div class="mb-3 d-none" id="new-password-container">
+                      <label for="password" class="form-label">New Password</label>
+                      <input type="password" class="form-control" id="password" name="password">
+                  </div>
+                  <div class="mb-3 d-none" id="new-password-again-container">
+                      <label for="password_again" class="form-label">New Password Again</label>
+                      <input type="password" class="form-control" id="password_again" name="password_again">
+                  </div>
+                  <button type="submit" class="btn btn-success w-100" id="resetBtn">Reset Password</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const isUserAuthenticated = {{ request.user.is_authenticated|yesno:"true,false" }};
+          const step = "{{ step_param|default:'' }}";
+      
+          if (!isUserAuthenticated) {
+              const modalElement = document.getElementById('authModal');
+      
+              // Modal kapatmayı engelle ve arka plan tıklamalarını devre dışı bırak
+              const authModal = new bootstrap.Modal(modalElement, {
+                  backdrop: 'static', // Arka plan tıklamalarını engelle
+                  keyboard: false     // ESC tuşuyla kapatmayı engelle
+              });
+      
+              // Modalı göster
+              authModal.show();
+      
+              // Eğer "step" parametresi "verification" ise ikinci modalı göster
+              if (step === "verification") {
+                  const verifyModal = new bootstrap.Modal(document.getElementById('verifyModal'));
+                  verifyModal.show();
+              }
+          } else {
+              // Kullanıcı doğrulanmışsa modalı kapat
+              const modalElement = document.getElementById('authModal');
+              const authModal = bootstrap.Modal.getInstance(modalElement); // Mevcut modal instance'ını al
+              if (authModal) {
+                  authModal.hide(); // Modalı kapat
+              }
+          }
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Register button click event
+            const registerButton = document.querySelector(".btn-success"); // Kayıt Ol butonunu seç
+            const loginButton = document.querySelector(".btn-primary");
+            registerButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Butonun varsayılan davranışını engelle
+                const registerModal = new bootstrap.Modal(document.getElementById('registerModal')); // Yeni modalı seç
+                registerModal.show(); // Yeni modalı göster
+            });
+            loginButton.addEventListener("click", function (event) {
+              event.preventDefault(); // Butonun varsayılan davranışını engelle
+              const loginModal = new bootstrap.Modal(document.getElementById('loginModal')); // Yeni modalı seç
+              loginModal.show(); // Yeni modalı göster
+          });
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Django'dan gelen hata mesajını al
+            const errorRegister = "{{ error_message.error_register|default:'' }}";
+            const errorLogin = "{{ error_message.error_login|default:'' }}";
+    
+            // Eğer error_message.error_register varsa modalı göster
+            if (errorRegister) {
+                const registerModal = new bootstrap.Modal(document.getElementById('registerModal')); // Yeni modalı seç
+                registerModal.show(); // Yeni modalı göster
+            }
+            else if (errorLogin) {
+              const loginModal = new bootstrap.Modal(document.getElementById('loginModal')); // Yeni modalı seç
+              loginModal.show(); // Yeni modalı göster
+            }
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const resetData = JSON.parse('{{ reset_data|safe }}');
+          console.log("🚀 ~ resetData:", resetData)
+          const rememberModal = new bootstrap.Modal(document.getElementById('rememberModal'));
+          if (resetData) {
+            // Modalı aç
+            rememberModal.show();
+        
+            // Alanları seç
+            const resetBtn = document.getElementById("resetBtn")
+            const infoSpan = document.getElementById("infoBtn")
+            const emailInput = document.getElementById("email_reset");
+            const emailContainer = document.getElementById("email-code-container");
+            const verificationCodeContainer = document.getElementById("verification-code-container");
+            const verificationCodeInput = document.getElementById("verification_code_reset");
+            const newPasswordContainer = document.getElementById("new-password-container");
+            const newPasswordAgainContainer = document.getElementById("new-password-again-container");
+        
+            // Eğer resetData içinde sadece email varsa
+            if (resetData.email && !resetData.verification_code) {
+              console.log("BURDA");
+              emailContainer.classList.add("d-none")
+              resetBtn.innerText = "Send Verification Code"
+
+              infoSpan.textContent = "If the email address is registered in our system, we will send a verification code. Please check your spam and inbox.";
+
+              emailInput.value = resetData.email;
+              emailInput.setAttribute("readonly", true); // Email'i düzenlenemez yap
+            
+              // Verification alanını görünür yap
+              verificationCodeContainer.classList.remove("d-none");
+            
+              // Verification input alanının düzenlenebilir olduğundan emin olun
+              verificationCodeInput.removeAttribute("disabled"); // Eğer disabled ise kaldır
+              verificationCodeInput.removeAttribute("readonly"); // Eğer readonly ise kaldır
+              verificationCodeInput.style.pointerEvents = "auto"; // Tıklanabilir yapar
+              verificationCodeInput.style.userSelect = "auto"; // Seçilebilir yapar
+              verificationCodeInput.focus(); // Kullanıcıyı otomatik olarak inputa odakla
+            }
+        
+            // Eğer resetData içinde email ve verification_code varsa
+            if (resetData.email && resetData.verification_code) {
+              console.log("BURDAA")
+              infoSpan.textContent = "Verification successful, please enter the required fields to set your new password.";
+              resetBtn.innerText = "Change Password"
+              emailInput.value = resetData.email;
+              emailInput.setAttribute("readonly", true); // Email'i düzenlenemez yap
+        
+              verificationCodeInput.value = resetData.verification_code;
+              verificationCodeInput.setAttribute("readonly", true); // Verification code'u düzenlenemez yap
+        
+              verificationCodeContainer.classList.remove("d-none"); // Verification alanını görünür yap
+              newPasswordContainer.classList.remove("d-none"); // Yeni şifre alanını görünür yap
+              newPasswordAgainContainer.classList.remove("d-none"); // Yeni şifre (tekrar) alanını görünür yap
+            }
+          }
+        });
+      </script>
+      <script>
+        const success = "{{ success_data|yesno:"true,false" }}";  // success parametresini al
+        console.log("success: ", success)
+        const isSuccess = (success === 'true');
+        if (isSuccess) {
+          // Eğer success true ise, Swal ile başarılı bildirim göster
+          Swal.fire({
+              icon: 'success',
+              title: 'Operation Successful',
+              text: 'You have logged in successfully!',  // Bu metni ihtiyaca göre değiştirebilirsiniz.
+          });
+        }
+     </script>
+     <script src="{% static 'js/tour_2.js' %}"></script>
+      <footer class="bg-light text-center text-lg-start mt-auto">
+        <!-- Sosyal Medya İkonları -->
+        <div class="d-flex justify-content-center align-items-center my-2 pt-3">
+          <a href="https://www.instagram.com/sealandtrip" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <i class="fab fa-instagram rounded-circle" style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "></i>
+          </a>
+          <a href="https://www.facebook.com/SeaLandTrip" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <i class="fab fa-facebook-f rounded-circle" style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "></i>
+          </a>
+          <a href="https://www.tiktok.com/@sealandtrip" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <i class="fab fa-tiktok rounded-circle" style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "></i>
+          </a>
+          <a href="https://www.youtube.com/@sealandtrip" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <i class="fab fa-youtube rounded-circle" style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "></i>
+          </a>
+          <a href="https://www.tripadvisor.com/Attraction_Review-g293974-d23335315-Reviews-SeaLand_Trip-Istanbul.html" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <div 
+              class="rounded-circle" 
+              style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center;
+              ">
+              <img src="{% static 'image/tripadvisor.svg' %}" 
+                  alt="TripAdvisor" 
+                  style="
+                    width: 25px; 
+                    height: 25px;
+                  ">
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/bQDAvd2yGCTKC8Jh9" class="text-light mx-2" target="_blank" style="font-size: 1.5rem; text-decoration: none;">
+            <i class="fas fa-map-marker-alt rounded-circle" 
+               style="
+                border: 3px solid #ffffff; 
+                width: 40px; 
+                height: 40px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              ">
+            </i>
+          </a>
+        </div>
+        <div class="text-center p-3 text-light">
+          © 2025 All Rights Reserved:
+          <a class="text-light" href="https://sealandturkey.com/">SEA & LAND TRAVEL AGENCY</a>
+        </div>
+      </footer>
+    </body>
+</html>

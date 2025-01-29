@@ -1,0 +1,246 @@
+{
+  "title_start": "Welcome to our Bosphorus Tour",
+  "description_start": "Hello everyone, and welcome aboard! We're so happy to have you with us. The tour will last about two hours. During the trip, we'll serve complimentary Turkish tea and instant coffee. If you'd like, you can also buy Turkish coffee, hot and cold drinks, or snacks from the buffet downstairs. The Wi-Fi password is posted on the walls, and our guides are here to help with anything you need. Sit back, relax, and enjoy the beautiful views!",
+  "banner_img_url_start": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  "title_tour": "2 Hour Tour Route",
+  "title_end": "The End",
+  "description_end": "We have now reached the end of the tour. Thank you for being here. We hope you enjoyed the beautiful sites of Istanbul and its rich history. We will be happy to have you on another tour soon. We greatly appreciate your comment. Please leave us a review on Trip Advisor. If you come to the boat with a hotel transfer, please remain with your guide at our location, and we will take you back to your hotel. Safe journey!",
+  "banner_img_url_end": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+
+  "logo": "./assets/img/sealand-logo-w.svg",
+
+  "tour_infos": [
+    {
+      "order": 1,
+      "place_name_EN": "Galata Bridge",
+      "description_EN": "The Galata Bridge, linking Eminönü and Karaköy, connects Istanbul's old and new parts. It was built in 1845, and the first was replaced by the current one in 1994. It is a busy place with fishermen on top and restaurants below serving local fish.",
+      "voice_path_EN": "./assets/voice/test.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Galata+K%C3%B6pr%C3%BCs%C3%BC/@41.0209261,28.971282,17z/data=!4m10!1m2!2m1!1sGalata+Bridge!3m6!1s0x14cab9ebc160871b:0x9500f83c603869a0!8m2!3d41.0200155!4d28.9732201!15sCg1HYWxhdGEgQnJpZGdlWg8iDWdhbGF0YSBicmlkZ2WSAQZicmlkZ2XgAQA!16zL20vMDM5OXE2?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 2,
+      "place_name_EN": "Galata Tower",
+      "description_EN": "The Galata Tower is a stone tower in Istanbul, built by the Genoese in 1348. It is 67 meters above sea level and offers a great view of the Bosphorus and all over Istanbul. It used to be a watchtower but is now a popular tourist attraction known for its incredible views.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Galata+Kulesi/@41.0261768,28.969306,15z/data=!4m6!3m5!1s0x14cab9e7a7777c43:0x4c76cf3dcc8b330b!8m2!3d41.025569!4d28.9741286!16zL20vMDFmaHhi?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 3,
+      "place_name_EN": "Hagia Sophia and Topkapi Palace",
+      "description_EN": "To your right are the Hagia Sophia and Topkapi Palace, the main attractions of Istanbul. The Roman and Ottoman Empires governed this area for hundreds of years. The Hagia Sophia has beautiful architecture. Once a cathedral, it was later a mosque. The Topkapi Palace was the residence of the Ottoman sultans and the empire's administrative center.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Topkap%C4%B1+Saray%C4%B1+M%C3%BCzesi/@41.0115195,28.980804,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab9b8afa5f833:0x15aa1943c3015300!8m2!3d41.0115195!4d28.9833789!16zL20vMDFsZ2N3?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 4,
+      "place_name_EN": "Bosphorus Overview",
+      "description_EN": "The Bosphorus is a natural strait connecting the Black Sea to the Marmara Sea. It is 32 kilometers long and 120 meters deep at its deepest point. The busy waterway has commercial vessels, oil tankers, and local fishing boats. Due to strong currents, swimming here is dangerous. Three bridges and two tunnels connect the two straits; one is for the subway, and one is for cars.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/%C4%B0BB+Sarayburnu+Park%C4%B1/@41.013981,28.9814694,16z/data=!4m14!1m7!3m6!1s0x14cab9b8afa5f833:0x15aa1943c3015300!2zVG9wa2FwxLEgU2FyYXnEsSBNw7x6ZXNp!8m2!3d41.0115195!4d28.9833789!16zL20vMDFsZ2N3!3m5!1s0x14cab99ad0d4bd05:0xb02721c831eb319e!8m2!3d41.0168377!4d28.9864873!16s%2Fg%2F121wh_3f?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 5,
+      "place_name_EN": "Galata Cruise Port",
+      "description_EN": "To start the tour, we'll pass by the Galata Cruise Port. The newly built cruise port is located on the Bosphorus coast, near Galata Tower. You can dine, shop, and take scenic walks at this port. Visitors enjoy the waterfront for its magnificent views during all four seasons of the year.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Galataport+%C4%B0stanbul/@41.0275544,28.9825503,17z/data=!4m10!1m2!2m1!1sGalata+Cruise+Port!3m6!1s0x14cab9d81ea6df6f:0x915b49a4a47881e7!8m2!3d41.0276477!4d28.9852806!15sChJHYWxhdGEgQ3J1aXNlIFBvcnRaFCISZ2FsYXRhIGNydWlzZSBwb3J0kgEWcG9ydF9vcGVyYXRpbmdfY29tcGFueZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSWGFYVTNlaTFCUlJBQuABAPoBBAhzEEc!16s%2Fg%2F11c5h0dks2?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 6,
+      "place_name_EN": "Cihangir Mosque",
+      "description_EN": "Cihangir Mosque is in the Cihangir neighborhood of Istanbul. It was built in the 16th century on the order of Sultan Suleiman the Magnificent in memory of his son, Prince Cihangir. This mosque offers a peaceful atmosphere and stunning Bosphorus views. Due to fires, it has been rebuilt several times and currently has an Ottoman architectural elegance.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Cihangir+Camii/@41.0301462,28.9871036,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab762b7f15ee9:0x57de13a63e8fb087!8m2!3d41.0301462!4d28.9871036!16s%2Fg%2F12z84km6k?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 7,
+      "place_name_EN": "Mimar Sinan University of Fine Arts",
+      "description_EN": "Turkey's first and most prestigious fine arts school was founded in 1882 by Osman Hamdi Bey, one of the leading Ottoman art and archaeology figures. It provides fine arts, architecture, and design courses that have formed generations of artists and designers. The university's historic campus represents its rich heritage and blends tradition and innovation in the heart of the city.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Mimar+Sinan+G%C3%BCzel+Sanatlar+%C3%9Cniversitesi/@41.0303734,28.986514,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab6527a1d6999:0x9352d9b7393bd2e7!8m2!3d41.0303734!4d28.9890889!16s%2Fm%2F027dr0l?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 8,
+      "place_name_EN": "Dolmabahçe Palace",
+      "description_EN": "Up ahead stands Dolmabahçe Palace and its clock tower. This luxurious Palace cost 35 tons of gold and was built by Garabet and Nikogos Balyan in the mid-1850s for Sultan Abdülmecid. After Turkey became a republic, it became a presidential palace where Atatürk stayed while visiting Istanbul. He died here on November 10, 1938. The Palace contains a 4.5-ton chandelier donated by Queen Victoria.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Dolmabah%C3%A7e+Saray%C4%B1/@41.038637,28.9962117,17z/data=!4m10!1m2!2m1!1sDolmabah%C3%A7e+Palace!3m6!1s0x14cab7761a3b7de3:0xdcd33e38cf3b830b!8m2!3d41.0391643!4d29.0004594!15sChJEb2xtYWJhaMOnZSBQYWxhY2VaFCISZG9sbWFiYWjDp2UgcGFsYWNlkgEGY2FzdGxl4AEA!16zL20vMDJxYmZt?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 9,
+      "place_name_EN": "Beşiktaş Stadium",
+      "description_EN": "Just behind the clock tower is the Beşiktaş Stadium, Istanbul's oldest football club, 'Black Eagles.' With a seating capacity of 42,000, this stadium is one of the landmarks of Istanbul. As a famous football team in Istanbul, the place is always packed with spectators.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Be%C5%9Fikta%C5%9F+JK+Stadyum+Turu+%26+M%C3%BCzesi/@41.0386313,28.9926109,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab776e0fda58f:0x4fcab85cedd790bd!8m2!3d41.0386313!4d28.9951858!16s%2Fg%2F11gbkrrp_v?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 10,
+      "place_name_EN": "Çırağan Palace",
+      "description_EN": "The luxury hotel on the left, Çırağan Palace, has a long history. The name means 'torch' and refers to the lavish Ottoman feasts held in tulip gardens. 19th-century Sultan Abdulaziz designed the Palace to flaunt wealth, but its use was discontinued when a fire destroyed it in 1910. In the 1990s, Kempinski replenished it, combining historical luxury with modern luxury. It has become a first-rate place with an exquisite view of the Bosphorus.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/%C3%87%C4%B1ra%C4%9Fan+Saray%C4%B1/@41.0434694,29.0115555,17z/data=!4m13!1m2!2m1!1zw4fEsXJhxJ9hbiBQYWxhY2U!3m9!1s0x14cab7bc74ac825b:0x2c0d68b195b12d34!5m2!4m1!1i2!8m2!3d41.0434694!4d29.0156754!15sChHDh8SxcmHEn2FuIFBhbGFjZZIBBWhvdGVs4AEA!16s%2Fg%2F11b7hfffb4?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 11,
+      "place_name_EN": "Galatasaray University",
+      "description_EN": "After that, we go through the Galatasaray University, established in 1871 during the reign of Sultan Abdülaziz. Initially intended for girls to stay, it was made a university in 1992. It is Turkey's only French university and has a good academic reputation and international connections.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Galatasaray+%C3%9Cniversitesi/@41.0459897,29.0173249,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7b8509b0191:0xa3e5369b89e22040!8m2!3d41.0459897!4d29.0198998!16s%2Fm%2F0283zqx?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 12,
+      "place_name_EN": "Ortaköy and Ortaköy Mosque",
+      "description_EN": "Ortaköy is an active street with everything you need to visit, eat, and enjoy by the seaside. Notable features include the Ortaköy Mosque, also recognized as the Büyük Mecidiye Mosque. This lovely Neo-Baroque building was built by Armenian architects Garabet and Nigogayos Balyan in the mid-19th century on the order of Sultan Abdulmecid I. The mosque's minarets, its ornamental surface, and the set by the waterfront are all fairly representative of Ortaköy.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/B%C3%BCy%C3%BCk+Mecidiye+Camii/@41.0472151,29.0243729,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7c8e42887ad:0xfd73f2a29eafc8bc!8m2!3d41.0472151!4d29.0269478!16zL20vMGJwYmJy?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 13,
+      "place_name_EN": "Bosphorus Bridge",
+      "description_EN": "We are moving underneath the Bosphorus Bridge, the July 15 Martyrs Bridge. This fantastic bridge unites the Asian and European sides of Istanbul. Finished in 1973, it is an important landmark that produces scenic views of the Bosphorus Strait and symbolizes the connection of two continents.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Bo%C4%9Faz+K%C3%B6pr%C3%BCs%C3%BC/@41.0472146,29.0166481,15z/data=!4m10!1m2!2m1!1sBosphorus+Bridge!3m6!1s0x14cab7d8d2631daf:0xe40f8fb4f2e631cd!8m2!3d41.0462127!4d29.0334774!15sChBCb3NwaG9ydXMgQnJpZGdlkgEGYnJpZGdl4AEA!16s%2Fg%2F11fx919hmh?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 14,
+      "place_name_EN": "Galatasaray Island",
+      "description_EN": "To the left, Suada, also called Galatasaray Island, is a small island in the Bosphorus in Istanbul. The Galatasaray Sports Club owns the park, which has become a leisure center. The island has various restaurants, pools, and event spaces, enjoying beautiful views of the Bosphorus and the city. It is a unique place for locals and tourists to eat and relax.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Galatasaray+Adas%C4%B1/@41.0597367,29.0189785,14z/data=!3m1!4b1!4m6!3m5!1s0x14cab62f37c60b09:0x7dd4ac2dd85c0f3c!8m2!3d41.059739!4d29.039578!16s%2Fm%2F046534d?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 15,
+      "place_name_EN": "Kuruçeşme Neighborhood",
+      "description_EN": "Kuruçeşme is the area alongside the Bosphorus, offering a picturesque view. Along with parks, this place also offers lively nightlife. Lakeside is a hot spot for a great meal, fun, and relaxation for locals and tourists.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/%C4%B0BB+Kuru%C3%A7e%C5%9Fme+Park%C4%B1/@41.0614004,29.029865,16z/data=!4m10!1m2!2m1!1sKuru%C3%A7e%C5%9Fme+Neighborhood!3m6!1s0x14cab62f7c0ccc79:0xf0d912cf602ac83c!8m2!3d41.0614004!4d29.0381047!15sChhLdXJ1w6dlxZ9tZSBOZWlnaGJvcmhvb2RaGiIYa3VydcOnZcWfbWUgbmVpZ2hib3Job29kkgEEcGFya5oBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOaGVtOTFSbVZSRUFF4AEA-gEECAAQGQ!16s%2Fg%2F113g69jzj?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 16,
+      "place_name_EN": "Arnavutköy",
+      "description_EN": "Arnavutköy is famous for its colorful Ottoman houses and lively fish restaurants. The Albanians initially settled there, but later, various Greeks, Armenians, and Jews settled there. This particular spot in the city is loved for its scenic beauty and culture.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Arnavutk%C3%B6y,+34345+Be%C5%9Fikta%C5%9F%2F%C4%B0stanbul,+T%C3%BCrkiye/@41.0680555,29.043056,15z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab61dac9dcd43:0xd666863827eb7ad4!2zTcSxc8SxciBBcmFwIEN1bWh1cml5ZXRpIEJhxZ9rb25zb2xvc2x1xJ91!8m2!3d41.0746108!4d29.0439267!16s%2Fg%2F1tfvq8ws!3m5!1s0x14cab621b54e1721:0x6b574662fca4d613!8m2!3d41.068056!4d29.043056!16zL20vMGM0dm4x?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 17,
+      "place_name_EN": "Egyptian Consulate",
+      "description_EN": "Abbas Halim Pasha constructed the Egyptian Consulate in 1910. It was first a private residence and later turned into a diplomatic facility. This building shows how the cultures and histories of Egypt and Turkey are related and help each other. It is located in an ideal place and plays a vital role in developing diplomatic and cultural ties between the two.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/M%C4%B1s%C4%B1r+Arap+Cumhuriyeti+Ba%C5%9Fkonsoloslu%C4%9Fu/@41.068705,29.0348663,14.75z/data=!4m6!3m5!1s0x14cab61dac9dcd43:0xd666863827eb7ad4!8m2!3d41.0746108!4d29.0439267!16s%2Fg%2F1tfvq8ws?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 18,
+      "place_name_EN": "Bebek Neighborhood",
+      "description_EN": "Next, we are at Bebek, a peaceful and lively neighborhood along the water, replete with upscale cafes, restaurants, and Bosporus views. Many locals and tourists walk along the shoreline and dine at different restaurants.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Bebek,+34342+Be%C5%9Fikta%C5%9F%2F%C4%B0stanbul,+T%C3%BCrkiye/@41.0798797,29.0459471,15z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab61dac9dcd43:0xd666863827eb7ad4!2zTcSxc8SxciBBcmFwIEN1bWh1cml5ZXRpIEJhxZ9rb25zb2xvc2x1xJ91!8m2!3d41.0746108!4d29.0439267!16s%2Fg%2F1tfvq8ws!3m5!1s0x14cab60281cd57d3:0xec7305ad1a4f7d35!8m2!3d41.0798802!4d29.0459471!16s%2Fg%2F11h057yw2c?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 19,
+      "place_name_EN": "Rumeli Fortress",
+      "description_EN": "Rumeli Fortress, located at the narrowest point of the Bosphorus, was completed only four months before Sultan Mehmet conquered Constantinople in 1453. This impressive structure helped control naval traffic and was helpful during the Ottomans' siege. The structure has served in many ways, including as a concert hall until 2008. Today, it is a museum where visitors can learn about its rich history and enjoy beautiful views of the Bosphorus.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Rumeli+Hisar%C4%B1/@41.0848224,29.054123,17z/data=!3m1!4b1!4m6!3m5!1s0x14caca0297bf7ef9:0x4657aaa4291ac6fa!8m2!3d41.0848224!4d29.0566979!16zL20vMDJtY3c5?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 20,
+      "place_name_EN": "Fatih Sultan Mehmet Bridge",
+      "description_EN": "The Second Bosphorus Bridge, or Fatih Sultan Mehmet Bridge, is a 1,510 m suspension bridge connecting Istanbul's European and Asian sides. It was completed in 1988. The bridge is named after Sultan Mehmed the Conqueror and carries vehicular and pedestrian traffic, easing city traffic. Its excellent engineering design gives breathtaking views of the Bosphorus.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Fatih+Sultan+Mehmet+K%C3%B6pr%C3%BCs%C3%BC/@41.0913194,29.0284753,14z/data=!4m10!1m2!2m1!1sFatih+Sultan+Mehmet+Bridge!3m6!1s0x14cacb4e853f255f:0xc64f4a906432b801!8m2!3d41.0913192!4d29.0614349!15sChpGYXRpaCBTdWx0YW4gTWVobWV0IEJyaWRnZVocIhpmYXRpaCBzdWx0YW4gbWVobWV0IGJyaWRnZZIBBmJyaWRnZeABAA!16zL20vMDN0YmNy?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 21,
+      "place_name_EN": "Anatolian Fortress",
+      "description_EN": "The fortress of Anadolu Hisarı is on the Asian side of Istanbul and is named Anatolian. Ottoman Sultan Bayezid I constructed the castle between 1393 and 1394 at the narrowest point of the Bosphorus to control maritime traffic. The castle was a major contributor to the Ottoman conquest of Constantinople. Today, it is a beautiful place in a lovely neighborhood that showcases Istanbul's rich history and the fantastic view of the Bosphorus.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Anadolu+Hisar%C4%B1/@41.082152,29.0643268,17z/data=!3m1!4b1!4m6!3m5!1s0x14caca1fcf05448f:0xaba3e984536ec08!8m2!3d41.082152!4d29.0669017!16zL20vMDFuMGx3?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 22,
+      "place_name_EN": "Küçüksu Pavilion",
+      "description_EN": "The Küçüksu Pavilion was built by the architects Garabet Amira Balyan and Nigoğayos Balyan in 1857 for Sultan Abdulmecid I along the Bosphorus. Initially intended for summer holidays, its interior decorations are charming, and the gardens are well arranged. Today, it is a museum that shows the magnificence of the Ottoman period.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/K%C3%BC%C3%A7%C3%BCksu+Kasr%C4%B1+(Milli+Saraylar)/@41.0784181,29.062304,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac9f43f832e2f:0xde332daf29a35547!8m2!3d41.0784181!4d29.0648789!16zL20vMGcxOF9w?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 23,
+      "place_name_EN": "Kandilli Neighborhood",
+      "description_EN": "Kandilli is a peaceful and historical neighborhood of Istanbul with wooden mansions and green hills. Ottoman elites used to enjoy it, but it still looked cool. The Kandilli Observatory, a vital earthquake and astronomy research center, is located here. The streets are peaceful, and the views are scenic; it is a nice place to explore.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Kandilli/@41.073549,29.0570163,16.75z/data=!4m15!1m8!3m7!1s0x14cab8680b8b940f:0xfa01ecae53aa3aa4!2zS2FuZGlsbGksIDM0Njg0IMOcc2vDvGRhci_EsHN0YW5idWwsIFTDvHJraXll!3b1!8m2!3d41.066756!4d29.0605389!16s%2Fm%2F0pdnlwg!3m5!1s0x14cac9f0031335d5:0x11eb2d14a254bbad!8m2!3d41.074487!4d29.0582321!16s%2Fg%2F1twxnt86?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 24,
+      "place_name_EN": "Kuleli Military High School",
+      "description_EN": "On the left side lies the Kuleli Military High School on the Bosphorus of Istanbul. It is one of the most prestigious military high schools in Turkey. Started in 1845, it has trained many of the nation's military leaders over its long history. The school is designed well, blending the traditional Ottoman and modern architectural styles. Kuleli has been essential to Turkey's military and education for many years. In addition to that, Kuleli is a picturesque area in Bosphorus.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Kuleli+Askeri+Lisesi/@41.0584027,29.0509026,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac9da385b5999:0x255f42fb140fd33c!8m2!3d41.0584027!4d29.0534775!16zL20vMDg2OXFm?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 25,
+      "place_name_EN": "Istanbul Yalı (Waterfront) Houses",
+      "description_EN": "The Yalı (waterfront) houses in Istanbul are wooden mansions built in the 18th and 19th centuries on the Bosporus. They are famous for their brilliant designs and stunning views and represent the city's rich legacy. Many Turkish television series and movies use these houses as the setting, so they also have cultural importance.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Vahdettin+K%C3%B6%C8%99k%C3%BC/@41.0548558,29.0486715,16.25z/data=!4m9!1m2!2m1!1sIstanbul+Yal%C4%B1+(Waterfront)+Houses!3m5!1s0x14cac9cfdef06dcb:0xffc0f848a1666c36!8m2!3d41.0537004!4d29.0549061!16s%2Fg%2F11b62wr66c?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 26,
+      "place_name_EN": "Beylerbeyi Palace",
+      "description_EN": "Sultan Abdülaziz ordered the Beylerbeyi Palace to be constructed in 1865 as a summer house and for hosting important guests. The extravagant and luxurious interior has a European and Ottoman touch. This building contains 26 rooms and six halls with fantastic craftsmanship. French Empress Eugénie is one of them. The Palace is beside the water and surrounded by beautiful gardens that provide quietude for the sultans. Later, the Palace also housed exiled royalty, like Sultan Abdülhamid II.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/Beylerbeyi+Saray%C4%B1/@41.0426689,29.0374091,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7da02210c0f:0xaa4ea6c2e70ee70a!8m2!3d41.0426451!4d29.039905!16zL20vMGYwX3Nz?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 27,
+      "place_name_EN": "Kuzguncuk Neighborhood",
+      "description_EN": "Kuzguncuk is a peaceful, multicultural neighborhood boasting colored wooden houses and a rich historical background. Once inhabited by Jewish, Greek, and Armenian people, mosques, churches, and synagogues can be observed together. The area's narrow streets, cafes, and shops make it an appealing place to wander and experience Istanbul's rich history.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/%C4%B0BB+Kuzguncuk+Park%C4%B1/@41.0371917,29.029846,16z/data=!4m15!1m8!3m7!1s0x14cab7e7cec26263:0x4db5c398a352590e!2zS3V6Z3VuY3VrLCAzNDY3NCDDnHNrw7xkYXIvxLBzdGFuYnVsLCBUw7xya2l5ZQ!3b1!8m2!3d41.0361216!4d29.0372643!16s%2Fm%2F027m1bp!3m5!1s0x14cab7c344ab4533:0xeb70dea09c5ea44e!8m2!3d41.0400751!4d29.0356549!16s%2Fg%2F1trzssff?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 28,
+      "place_name_EN": "Üsküdar District",
+      "description_EN": "Üsküdar is a historic district on the Asian side, famous for its Ottoman architecture. Key landmarks include the Maiden's Tower and mosques like Mihrimah Sultan and Yeni Valide. The area is known for its traditional wooden houses, lively markets, and cozy cafes, offering a mix of cultural heritage and local life. Üsküdar remains a great place to experience Istanbul's rich past in a modern setting.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/%C3%9Csk%C3%BCdar,+Kuzguncuk,+34674+%C3%9Csk%C3%BCdar%2F%C4%B0stanbul,+T%C3%BCrkiye/@41.0322354,29.031938,15z/data=!3m1!4b1!4m10!1m2!2m1!1zw5xza8O8ZGFyIERpc3RyaWN0!3m6!1s0x14cab78eb4cc28d7:0xd6cc13bd2c633762!8m2!3d41.032236!4d29.031938!15sChLDnHNrw7xkYXIgRGlzdHJpY3SSAQhsb2NhbGl0eeABAA!16s%2Fg%2F1ynnq3mt1?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    },
+    {
+      "order": 29,
+      "place_name_EN": "Maiden's Tower",
+      "description_EN": "Kız Kulesi, or the Maiden's Tower, was built in 408 BC and is one of Istanbul's oldest monuments. Situated on a small island close to Üsküdar, it has served many purposes, such as a lighthouse, watchtower, and quarantine station. During the Ottoman era, it was used for naval defense. You may take the boat from Üsküdar and visit the tower to enjoy gorgeous Bosphorus views. The place also has a museum that shows its history.",
+      "voice_path_EN": "./assets/voice/test2.mp3",
+      "google_maps_url": "https://www.google.com/maps/place/K%C4%B1z+Kulesi/@41.0211315,29.0015458,17z/data=!4m6!3m5!1s0x14cab82bea99445f:0x6ed7f4baceb4476c!8m2!3d41.0211216!4d29.0041105!16zL20vMGRxbDR2?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "info_url": "https://sealandturkey.com/uskudar-district/"
+    }
+  ]
+}
